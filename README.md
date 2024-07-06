@@ -93,8 +93,8 @@ npx saph-convert cdir ./commands
 // src/commands/ping.js
 const { ApplicationCommandRegistry, Command } = require('@sapphire/framework');
 
-module.exports = class UserCommand extends Command {
-	/*
+class UserCommand extends Command {
+	/**
 	 * @param {Command.LoaderContext} registry
 	 */
 	constructor(context) {
@@ -117,6 +117,10 @@ module.exports = class UserCommand extends Command {
 	async chatInputRun(interaction) {
 		return interaction.reply('Pong!');
 	}
+}
+
+module.exports = {
+	UserCommand
 };
 ```
 
